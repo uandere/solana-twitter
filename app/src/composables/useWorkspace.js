@@ -13,6 +13,7 @@ export const initWorkspace = () => {
   const connection = new Connection("http://127.0.0.1:8899");
   const provider = computed(() => new AnchorProvider(connection, wallet.value));
   const program = computed(() => new Program(idl, provider.value));
+
   
   workspace = {
     wallet,
