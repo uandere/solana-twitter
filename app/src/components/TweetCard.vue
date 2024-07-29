@@ -8,7 +8,6 @@ const props = defineProps({
 
 const { tweet } = toRefs(props);
 const { wallet } = useWorkspace();
-
 const authorRoute = computed(() => {
   if (
     wallet.value &&
@@ -40,10 +39,9 @@ const authorRoute = computed(() => {
       </time>
     </div>
     <p class="whitespace-pre-wrap" v-text="tweet.content"></p>
-    <!-- TODO: Link to the topic page. -->
     <router-link
       v-if="tweet.topic"
-      :to="{ name: 'Home' }"
+      :to="{ name: 'Topics', params: { topic: tweet.topic } }"
       class="inline-block mt-2 text-pink-500 hover:underline"
     >
       #{{ tweet.topic }}
