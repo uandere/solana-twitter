@@ -62,3 +62,8 @@ As it turns out, the constructor of the `Program` class has changed,
 but the contributors of Anchor didn't reflect that change in the
 documentation (I didn't find any mention of this in the official
 CHANGELOG either). 
+
+The rest of the episode is pretty straightforward, although if you
+will go by the author's order, you will first get an error when 
+clicking on a timestamp link. But this is handled at the end of the
+episode.
