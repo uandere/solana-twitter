@@ -28,6 +28,10 @@ TODO
 TODO
 
 ### Episode 9
+Before you try to do something in this episode: **Don't forget to run 
+`solana-test-validator` to start the local ledger and 
+`anchor run test` to get access to the the tweets from the tests!**
+
 Honestly, for me it was a challenge to get things done here. For
 some reasons, I was constantly getting the exact same error:
 
@@ -45,8 +49,8 @@ index.js:5065 Uncaught (in promise) TypeError: Cannot read properties of undefin
     at get value (reactivity.esm-bundler.js:994:147)
 ```
 
-However, these are changes to the original episode that will do the 
-job:
+However, these are the changes to the original episode that will do
+the job:
 
 File: `useWorkspase.js`
 ```diff
@@ -54,6 +58,7 @@ File: `useWorkspase.js`
 + new Program(idl, provider.value));
 ```
 
-It seems, like the constructor of the `Program` class has changed,
-but I was not able to find the corresponding change in the Anchor
-docs.
+As it turns out, the constructor of the `Program` class has changed,
+but the contributors of Anchor didn't reflect that change in the
+documentation (I didn't find any mention of this in the official
+CHANGELOG either). 
