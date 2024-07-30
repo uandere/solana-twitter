@@ -1,17 +1,19 @@
 # Solana Twitter
 
+![img.png](project_data/img.png)
+
 ## General Info
 
-This is a modern verion of a popular [solana-twitter](https://lorisleiva.com/create-a-solana-dapp-from-scratch)
-app, made in 2021 by **Loris Leiva**. For some reason, author
-is no longer updates this series of articles, so it is now outdated.
+This is a modern version of a popular [solana-twitter](https://lorisleiva.com/create-a-solana-dapp-from-scratch)
+app, made in 2021 by **Loris Leiva**. For some reason, the author
+no longer updates this series of articles, so it is now outdated.
 
 So I did some work to bring the project back to life.
 This work includes:
 
 - migrating to newer / safer versions of libraries used
 - minor bug and logic fixes
-- updating code to latest version of Anchor (0.30 and newer).
+- updating code to the latest version of Anchor (0.30 and newer).
 
 Feel free to examine and learn something new. If this helps you, 
 please don't forget to give me a star on GitHub.
@@ -60,7 +62,7 @@ if content.chars().count() > 280 {
 ### Episode 5
 
 Make sure you don't use `@project-serum/anchor` library (which is
-outdated), but `@coral-xyz/anchor` instead. If you don't - you will
+outdated), but `@coral-xyz/anchor` instead. If you don't, you will
 stumble across millions of stupid warnings and errors.
 
 When catching errors in the last few tests, use `error.error.errorMessage`
@@ -193,10 +195,10 @@ is to the next episode note.
 ### Episode 9
 Before you try to do something in this episode: **Don't forget to run 
 `solana-test-validator` to start the local ledger and 
-`anchor run test` to get access to the the tweets from the tests!**
+`anchor run test` to get access to the tweets from the tests!**
 
-Honestly, for me it was a challenge to get things done here. For
-some reasons, I was constantly getting the exact same error:
+Honestly, for me, it was a challenge to get things done here. For
+some reason, I was constantly getting the exact same error:
 
 ```
 index.js:5065 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'size')
