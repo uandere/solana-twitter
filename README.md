@@ -47,13 +47,13 @@ When handling errors, use `err!()` macro instead of `Err(<>.into())`:
 
 ```diff
 if topic.chars().count() > 50 {
-    - return Err(ErrorCode::TopicTooLong.into())
-    + return err!(ErrorCode::TopicTooLong);
+-    return Err(ErrorCode::TopicTooLong.into())
++    return err!(ErrorCode::TopicTooLong);
 }
 
 if content.chars().count() > 280 {
-    - return Err(ErrorCode::ContentTooLong.into())
-    + return err!(ErrorCode::ContentTooLong);
+-    return Err(ErrorCode::ContentTooLong.into())
++    return err!(ErrorCode::ContentTooLong);
 }
 ```
 
