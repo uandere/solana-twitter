@@ -1,0 +1,103 @@
+{
+  "address": "B3W8FdURNLEEJncJNEFfu3Jfui7PTbpAcuXDnbA4Ctin",
+  "metadata": {
+    "name": "solana_twitter",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "send_tweet",
+      "discriminator": [
+        179,
+        213,
+        79,
+        165,
+        123,
+        247,
+        82,
+        109
+      ],
+      "accounts": [
+        {
+          "name": "tweet",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "author",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "topic",
+          "type": "string"
+        },
+        {
+          "name": "content",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Tweet",
+      "discriminator": [
+        229,
+        13,
+        110,
+        58,
+        118,
+        6,
+        20,
+        79
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "TopicTooLong",
+      "msg": "The provided topic should be 50 characters long maximum."
+    },
+    {
+      "code": 6001,
+      "name": "ContentTooLong",
+      "msg": "The provided content should be 280 characters long maximum."
+    }
+  ],
+  "types": [
+    {
+      "name": "Tweet",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "author",
+            "type": "pubkey"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "topic",
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
