@@ -234,3 +234,10 @@ will go by the author's order, you will first get an error when
 clicking on a timestamp link. But he handles it at the end of the
 episode, so just follow him.
 
+### Episode 10
+
+Again and again, use `@coral-xyz/anchor` when changing 
+`send-tweet.js`.
+
+
+
