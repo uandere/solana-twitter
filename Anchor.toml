@@ -5,14 +5,27 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-solana_twitter = "B3W8FdURNLEEJncJNEFfu3Jfui7PTbpAcuXDnbA4Ctin"
+solana_twitter = "2BDbYV1ocs2S1PsYnd5c5mqtdLWGf5VbCYvf28rs9LGj"
+
+[programs.testnet]
+solana_twitter = "2BDbYV1ocs2S1PsYnd5c5mqtdLWGf5VbCYvf28rs9LGj"
+
+[programs.devnet]
+solana_twitter = "2BDbYV1ocs2S1PsYnd5c5mqtdLWGf5VbCYvf28rs9LGj"
+
+[programs.mainnet]
+solana_twitter = "2BDbYV1ocs2S1PsYnd5c5mqtdLWGf5VbCYvf28rs9LGj"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+copy-idl = "mkdir -p app/src/idl && cp target/idl/solana_twitter.json app/src/idl/solana_twitter.json"
+
+[workspace]
+types = "app/src/idl/"
